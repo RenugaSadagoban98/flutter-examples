@@ -107,18 +107,19 @@ class _CustomHeaderDataGridState extends SampleViewState {
     final themeData =
         SfDataGridThemeData(brightness: model.themeData.brightness);
     return Container(
+        padding: EdgeInsets.all(16),
         child: Row(
-      children: [
-        Flexible(
-            child: Text(column.headerText,
-                style: themeData.headerStyle.textStyle)),
-        Icon(
-          Icons.keyboard_arrow_down,
-          size: 25,
-          color: Colors.grey,
-        )
-      ],
-    ));
+          children: [
+            Flexible(
+                child: Text(column.headerText,
+                    style: themeData.headerStyle.textStyle)),
+            Icon(
+              Icons.keyboard_arrow_down,
+              size: 25,
+              color: Colors.grey,
+            )
+          ],
+        ));
   }
 
   buildShowMenu(BuildContext context, DataGridCellTapDetails details) {
